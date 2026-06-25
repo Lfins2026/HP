@@ -1,0 +1,5 @@
+# Exclude note drafts and local resources
+note/
+
+# macOS system files
+.DS_Store
