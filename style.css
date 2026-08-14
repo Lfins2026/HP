@@ -383,10 +383,10 @@ header {
 }
 
 .profile-heading-line {
-  display: block;
+  white-space: nowrap;
 }
 
-.profile-heading-line:first-child {
+.profile-heading-second {
   white-space: nowrap;
 }
 
@@ -1193,6 +1193,16 @@ footer {
   }
 }
 
+@media (max-width: 640px) {
+  .profile-heading-second {
+    white-space: normal;
+  }
+
+  .profile-heading-second span {
+    display: block;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     padding-right: 18px;
@@ -1210,4 +1220,5 @@ footer {
   .hero-subtitle span {
     display: block;
   }
+
 }
