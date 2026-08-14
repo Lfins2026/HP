@@ -198,6 +198,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  max-width: 1440px;
 }
 
 .logo {
@@ -212,6 +213,7 @@ header {
   font-size: 1.3rem;
   letter-spacing: 2px;
   color: var(--color-orange);
+  white-space: nowrap;
 }
 
 .logo-sub {
@@ -224,7 +226,7 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: clamp(18px, 2vw, 32px);
   align-items: center;
 }
 
@@ -232,6 +234,7 @@ header {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-navy);
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -272,26 +275,40 @@ header {
 }
 
 .hero-title {
-  font-size: 3.2rem;
+  font-size: clamp(2.15rem, 2.8vw, 2.65rem);
   color: var(--color-navy);
   margin-bottom: 24px;
   line-height: 1.25;
 }
 
-.hero-title span {
+.hero-title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-title-line-partner > span {
+  white-space: nowrap;
+}
+
+.hero-title-name {
   color: var(--color-orange);
 }
 
 .hero-subtitle {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
   font-weight: 500;
   color: var(--color-text-light);
   margin-bottom: 40px;
   line-height: 1.5;
 }
 
+.hero-subtitle span {
+  white-space: nowrap;
+}
+
 .hero-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -1074,6 +1091,12 @@ footer {
 }
 
 /* --- Responsive Adaptations --- */
+@media (max-width: 1280px) {
+  .nav-links {
+    display: none; /* In a real app, a hamburger menu would be added here */
+  }
+}
+
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1128,7 +1151,7 @@ footer {
   }
   
   .hero-title {
-    font-size: 2.3rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
   }
   
   .hero-subtitle {
@@ -1143,10 +1166,6 @@ footer {
     margin: 0 auto;
   }
   
-  .nav-links {
-    display: none; /* In a real app, a hamburger menu would be added here */
-  }
-  
   .section-title {
     font-size: 2rem;
     margin-bottom: 40px;
@@ -1159,5 +1178,24 @@ footer {
   .session-details {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 8.4vw, 2.1rem);
+  }
+
+  .hero-title-line-partner > span {
+    display: block;
+  }
+
+  .hero-subtitle span {
+    display: block;
   }
 }
