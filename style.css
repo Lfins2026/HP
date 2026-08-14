@@ -742,8 +742,13 @@ header {
 
 /* --- Miyashita x MYself Connect --- */
 .collab-concept {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.35em;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 800;
   color: var(--color-navy);
   margin-bottom: 60px;
@@ -751,6 +756,10 @@ header {
   background-color: var(--color-bg-light);
   border-radius: 12px;
   border-left: 6px solid var(--color-teal);
+}
+
+.collab-concept span {
+  white-space: nowrap;
 }
 
 .collab-grid {
@@ -1115,6 +1124,10 @@ footer {
   .mvv-quote {
     font-size: 1.3rem;
     white-space: nowrap;
+  }
+
+  .collab-concept {
+    flex-wrap: nowrap;
   }
 }
 
