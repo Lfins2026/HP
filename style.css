@@ -534,13 +534,17 @@ header {
 }
 
 .mvv-quote {
-  font-size: 1.5rem;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
   font-weight: 700;
   color: var(--color-navy);
   margin-bottom: 16px;
   line-height: 1.4;
   border-left: 4px solid var(--color-orange);
   padding-left: 16px;
+}
+
+.mvv-quote span {
+  display: inline-block;
 }
 
 .mvv-description {
