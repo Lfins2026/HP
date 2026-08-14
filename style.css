@@ -378,8 +378,20 @@ header {
 .profile-heading {
   margin-bottom: 24px;
   color: var(--color-navy);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.65vw, 1.35rem);
   line-height: 1.6;
+}
+
+.profile-heading-line {
+  display: block;
+}
+
+.profile-heading-line:first-child {
+  white-space: nowrap;
+}
+
+.profile-heading-line span {
+  white-space: nowrap;
 }
 
 .profile-bio p {
