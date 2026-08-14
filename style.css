@@ -1107,6 +1107,17 @@ footer {
 }
 
 /* --- Responsive Adaptations --- */
+@media (min-width: 1281px) {
+  #mvv .container {
+    max-width: 1500px;
+  }
+
+  .mvv-quote {
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 1280px) {
   .nav-links {
     display: none; /* In a real app, a hamburger menu would be added here */
